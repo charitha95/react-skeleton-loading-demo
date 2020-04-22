@@ -14,6 +14,7 @@ const Card = props =>
               height={75}
               width={75}
               colors={{ background: '#DD2A7B', pulse: '#8134AF' }}
+              classes='image-skeleton'
             />
           }
 

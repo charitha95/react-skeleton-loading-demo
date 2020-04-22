@@ -24,7 +24,7 @@ class PluginExplanation extends Component {
         subTitle: 'Cosmetics',
         body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex dolorum, impedit laudantium excepturi qui ab repellendus.',
       })
-    }, 3000);
+    }, 30000);
   }
 
   resetHandler = () => {

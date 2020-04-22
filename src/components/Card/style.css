@@ -18,7 +18,7 @@
   position: relative;
   display: block;
   padding: 10px;
-  /* margin: 10px auto 10px auto; */
+  margin-top: 65px;
   width: 100%;
   max-width: 350px;
   text-align: center;
@@ -70,12 +70,14 @@
   font-size: 2.25em;
   line-height: 1.6;
   color: #202020;
-  margin: 15px 0;
+  margin-top: 15px;
+  margin-bottom: 25px;
 }
 
 .card__content--left h4 {
   font-size: 1em;
   color: #b9aebf;
+  margin-top: 55px;
 }
 
 .card__content--header {
@@ -89,6 +91,11 @@
   line-height: 1.6;
 }
 
+.image-skeleton {
+  margin-bottom: 35px !important;
+}
+
+
 @media screen and (min-width: 768px) {
   .card {
     padding: 15px;
@@ -101,7 +108,7 @@
     padding-bottom: 30px;
   }
   .card__content img {
-    margin-bottom: 15px;
+    margin-bottom: 35px;
   }
   .flex__item {
     padding: 30px 0 30px 0;

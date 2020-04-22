@@ -9,8 +9,9 @@ import './style.css'
  * @param {boolean} circle makes a skeleton a circle instead of a line.
  * @param {number} count repeats the skeleton.
  * @param {number} margin bottom margin of the skeleton.
+ * @param {string} classes define own class.
  */
-const Skeleton = ({ colors, width, height, center, circle, count, margin }) => {
+const Skeleton = ({ colors, width, height, center, circle, count, margin, classes }) => {
 
   const background = colors ? colors.background || '#f0f0f0' : '#f0f0f0';
   const pulse = colors ? colors.pulse || '#f8f8f8' : '#f8f8f8';
@@ -28,9 +29,9 @@ const Skeleton = ({ colors, width, height, center, circle, count, margin }) => {
   let element = null;
 
   if (count > 0) {
-    element = [...Array(count).keys()].map((_, key) => <span key={key} style={{ ...styleObj, marginBottom: `${margin}px` }} className='react-skeleton'></span>)
+    element = [...Array(count).keys()].map((_, key) => <span key={key} style={{ ...styleObj, marginBottom: `${margin}px` }} className={`react-skeleton ${classes}`}></span>)
   } else {
-    element = <span className='react-skeleton' style={styleObj} />
+    element = <span className={`react-skeleton ${classes}`} style={styleObj} />
   }
 
   return element
