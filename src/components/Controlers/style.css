@@ -18,3 +18,7 @@ input[type='text'], input[type='number'] {
 .btn-apply {
   width: 150px;
 }
+
+.sub-title {
+  margin: 30px -15px;
+}

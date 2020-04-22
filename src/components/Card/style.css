@@ -36,7 +36,6 @@
 .card__content {
   display: flex;
   flex-direction: column;
-  padding-bottom: 30px;
 }
 
 .card__content img {
@@ -104,13 +103,14 @@
   .card__container {
     padding: 15px;
   }
-  .card__content {
-    padding-bottom: 30px;
-  }
   .card__content img {
     margin-bottom: 35px;
   }
   .flex__item {
     padding: 30px 0 30px 0;
   }
+}
+
+.content {
+  padding-top: 50px;
 }

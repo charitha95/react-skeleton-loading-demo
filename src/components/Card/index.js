@@ -7,26 +7,32 @@ const Card = props =>
     <div className="card__container">
       <div className="card__content">
         <div className="card__content--left flex__item">
-          {props.img ? <img src={props.img} alt="" /> :
+          {props.card.img ? <img src={props.card.img} alt="" /> :
             <Skeleton
               center
-              circle
-              height={75}
-              width={75}
-              colors={{ background: '#DD2A7B', pulse: '#8134AF' }}
+              circle={props.elements.img.circle}
+              height={props.elements.img.height}
+              width={props.elements.img.width}
               classes='image-skeleton'
             />
           }
 
 
           <div className="card__content--header">
-            <h2>{props.title || <Skeleton />} </h2>
-            <h4>{props.subTitle || <Skeleton />}</h4>
+            <h2>{props.card.title || <Skeleton colors={{
+              background: props.elements.title.background,
+              pulse: props.elements.title.pulse
+            }} />}
+            </h2>
+            <h4>{props.card.subTitle || <Skeleton 
+            width={props.elements.sub.width}
+            center={props.elements.sub.center}
+            />}</h4>
           </div>
         </div>
-        <div className="card__content--right flex__item">
+        <div className="card__content--right flex__item content">
           <p>
-            {props.body || <Skeleton count={4} margin={10} />}
+            {props.card.body || <Skeleton count={props.elements.body.count} margin={props.elements.body.margin} />}
           </p>
         </div>
       </div>

@@ -10,9 +10,12 @@ const Controlers = props => <div className='controlers'>
     </Form.Label>
       <Col sm="10" className='checkbox-wrapper'>
         <Form.Check
+          defaultChecked={true}
           type="switch"
           id="custom-switch"
           label=""
+          name='circle'
+          onChange={props.imgChangeHandler}
         />
       </Col>
     </Form.Group>
@@ -22,7 +25,7 @@ const Controlers = props => <div className='controlers'>
         Width
     </Form.Label>
       <Col sm="10">
-        <Form.Control type="number" placeholder="75" />
+        <Form.Control type="number" min="0"  name='width' onChange={props.imgChangeHandler} placeholder="75" />
       </Col>
     </Form.Group>
 
@@ -31,17 +34,17 @@ const Controlers = props => <div className='controlers'>
         Height
     </Form.Label>
       <Col sm="10">
-        <Form.Control type="number" placeholder="75" />
+        <Form.Control type="number" min="0" name='height' onChange={props.imgChangeHandler} placeholder="75" />
       </Col>
     </Form.Group>
     <hr></hr>
     <Form.Group as={Row} controlId="formPlaintextPassword">
       <Form.Label column sm="2">
-        Color
+        Colors
     </Form.Label>
       <Col sm="10">
-        <Form.Control type="text" placeholder="pulse: #f2f2f2" />
-        <Form.Control className='mt-1' type="text" placeholder="background: grey" />
+        <Form.Control type="text" name='pulse' onChange={props.titleChangeHandler} placeholder="pulse: #8134AF" />
+        <Form.Control className='mt-1' type="text" name='background' onChange={props.titleChangeHandler} placeholder="back: #DD2A7B" />
       </Col>
     </Form.Group>
     <hr></hr>
@@ -50,7 +53,22 @@ const Controlers = props => <div className='controlers'>
         Width
     </Form.Label>
       <Col sm="10">
-        <Form.Control type="number" placeholder="100" />
+        <Form.Control type="number" min="0" name='width' onChange={props.subChangeHandler} placeholder="100" />
+      </Col>
+    </Form.Group>
+    <Form.Group as={Row} controlId="formPlaintextEmail">
+      <Form.Label column sm="2">
+        Center
+    </Form.Label>
+      <Col sm="10" className='checkbox-wrapper'>
+        <Form.Check
+          defaultChecked={true}
+          type="switch"
+          id="custom-switch-center"
+          label=""
+          name='center'
+          onChange={props.subChangeHandler}
+        />
       </Col>
     </Form.Group>
     <hr></hr>
@@ -59,7 +77,7 @@ const Controlers = props => <div className='controlers'>
         Count
     </Form.Label>
       <Col sm="10">
-        <Form.Control type="number" placeholder="5" />
+        <Form.Control type="number" min="0" placeholder="5" name='count' onChange={props.bodyChangeHandler} />
       </Col>
     </Form.Group>
     <Form.Group as={Row} controlId="formPlaintextPassword">
@@ -67,7 +85,7 @@ const Controlers = props => <div className='controlers'>
         margin
     </Form.Label>
       <Col sm="10">
-        <Form.Control type="number" placeholder="5" />
+        <Form.Control type="number" min="0" placeholder="5" name='margin' onChange={props.bodyChangeHandler} />
       </Col>
     </Form.Group>
     <hr></hr>
@@ -80,12 +98,16 @@ const Controlers = props => <div className='controlers'>
           <FormControl
             aria-label="Default"
             aria-describedby="inputGroup-sizing-default"
+            placeholder='3000'
+            type='number' 
+            min="0"
+            onChange={props.timeOutChangeHandler}
           />
         </InputGroup>
 
       </Col>
       <Col>
-        <Button variant="primary" className='btn-apply'>Apply</Button>
+        <Button variant="primary" className='btn-apply' onClick={props.apply}>Apply</Button>
       </Col>
     </Row>
   </Form>
