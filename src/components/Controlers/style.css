@@ -1,0 +1,15 @@
+.controlers {
+  width: 100%;
+}
+
+.controlers p {
+  margin: 0;
+}
+
+.checkbox-wrapper {
+  padding-top: 10px;
+}
+
+input[type='text'], input[type='number'] {
+  width: 150px;
+}

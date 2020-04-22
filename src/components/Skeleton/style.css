@@ -1,0 +1,12 @@
+.react-skeleton::before {
+  content: "\00a0";
+}
+
+@keyframes pulse-a11d275 {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: -135% 0%;
+  }
+}

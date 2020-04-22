@@ -1,0 +1,6 @@
+.exaple-block {
+  display: flex;
+  justify-content: center;
+  max-width: 720px;
+  margin: auto;
+}
